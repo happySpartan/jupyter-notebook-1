@@ -12,6 +12,9 @@ jobs:
         python-version: '3.9'
         cache: 'pip' # caching pip dependencies
     - run: pip install -r requirements.txt
+    - uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
     - shell: bash
       run: |
         expr 1 + 1 > output.log
