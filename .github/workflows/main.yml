@@ -21,7 +21,7 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get -y install pandoc
-        sudo apt-get install texlive-latex-extra
+        sudo apt-get install texlive-xetex texlive-fonts-recommended texlive-plain-generic
     - shell: bash
       run: |
         jupyter nbconvert --to pdf --allow-chromium-download test.ipynb
