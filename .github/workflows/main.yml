@@ -47,6 +47,13 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
     - name: Upload to blob storage
       uses: azure/CLI@v1
+      env:
+        AZURE_STORAGE_KEY: ${{ secrets.AZURE_STORAGE_KEY }}
       with:
         inlineScript: |
-            az storage blob upload-batch --account-name satestgitpagesdev01 --auth-mode key -d '$web' -s ./dist
+            az storage blob upload-batch --account-name satestgitpagesdev01 --account-key "$env:AZURE_STORAGE_KEY" -d '$web' -s ./dist
+  # Azure logout
+    - name: logout
+      run: |
+            az logout
+      if: always()
