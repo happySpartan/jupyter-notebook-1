@@ -2,3 +2,4 @@ nbconvert
 jupyterlab
 jupyter
 powershell_kernel
+nbconvert[webpdf]
