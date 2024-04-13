@@ -19,4 +19,5 @@ jobs:
     - run: dotnet interactive jupyter install
     - shell: bash
       run: |
-        expr 1 + 1 > output.log
+        jupyter nbconvert --to pdf --allow-chromium-download test.ipynb
+
