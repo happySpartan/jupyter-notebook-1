@@ -1,0 +1,7 @@
+/node_modules
+
+/test_files
+
+/.ipynb_checkpoints
+
+/.vscode

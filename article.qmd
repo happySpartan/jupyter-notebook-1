@@ -1,0 +1,95 @@
+---
+title: "Quarto Basics"2
+format:
+  html:
+    code-fold: true
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+jupyter: python3
+---
+
+Kusto Query Language (KQL) is a *read-only* language that is used to query data in:
+- Azure Data Explorer
+- Azure Monitor
+- Azure Log Analytics
+- Azure Application Insights 
+- Azure Graph Explorer
+
+It is based on a subset of the SQL language. KQL is used across many Microsoft services and is a great tool for querying data. This guide will help you get started with KQL.
+
+The name Kusto is derived from the Azure Data Explorer service, which was formerly known as "Kusto". The language itself is called KQL.
+
+Kusto is a reference to a series of technologies for storing and analyzing big data. The Kusto Query Language (KQL) is a read-only language that is used to query data in Azure Data Explorer. It is based on a subset of the SQL language. KQL is used across many Microsoft services and is a great tool for querying data. This guide will help you get started with KQL.
+
+
+
+For a demonstration of a line plot on a polar axis, see @fig-polar.
+
+```{sql}
+# | label: fig-polar
+# | fig-cap: "A line plot on a polar axis"
+
+StormEvents #Name of the table 
+| where StartTime between (datetime(2007-11-01) .. datetime(2007-12-01)) #Filtering the data
+| count #Aggregation - Counting the number of rows
+```
+
+Overall, KQL supports 3 of user query statements:
+
+- A tabular expression statement
+- A let statement
+- A set statement
+
+In Azure Graph Explorer, you can use the Kusto Query Language (KQL) to query the Azure Monitor log. The Azure Monitor log is a log that contains information about the performance and health of your Azure resources. You can use KQL to query the log and get information about the performance and health of your Azure resources.
+
+
+```{sql}
+# | label: fig-polar
+# | fig-cap: "A line plot on a polar axis"
+
+```
+
+
+There are a few limitations to keep in mind when using KQL:
+- KQL is a read-only language, so you cannot use it to modify data.
+- KQL does not support the use of variables.
+- KQL does not support the use of subqueries.
+- KQL does not support the use of RIGHT joins.
+- KQL does not support the use of the HAVING clause.
+
+```{python}
+
+```
+
+
+The project/select conondrum:
+
+- The project operator is used to select columns from a table.
+- SELECT is a common key words used in many SQL queries.
+- A "projection" is a term used in mathematics to describe the process of selecting a subset of a set of objects.
+
+--> Although SELECT is a common keyword used in many SQL queries, it is not supported in KQL. Instead, you should use the *project* operator to select columns from a table.
+
+
+Using Aggregation:
+
+- The summarize operator is used to aggregate data in KQL.
+
+Summarize by 
+
+Summarize into bins
+
+
+
+The art of joining tables:
+
+
+A few important links:
+https://learn.microsoft.com/en-us/training/modules/intro-to-azure-data-explorer/
+https://www.pluralsight.com/courses/kusto-query-language-kql-from-scratch
+https://detective.kusto.io/
+https://cloudacademy.com/lab/introduction-to-kusto-query-language/
+https://www.sqlbi.com/articles/from-sql-to-dax-and-back/
+
