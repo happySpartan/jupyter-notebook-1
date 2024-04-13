@@ -37,6 +37,8 @@ jobs:
         jupyter nbconvert --to html test.ipynb
     - name: Upload Pages artifact
       uses: actions/upload-pages-artifact@v3
+      with:
+        path: "/test.html"
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
