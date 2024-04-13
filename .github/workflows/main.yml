@@ -19,5 +19,9 @@ jobs:
     - run: dotnet interactive jupyter install
     - shell: bash
       run: |
+        sudo apt-get update
+        sudo apt-get -y install pandoc
+    - shell: bash
+      run: |
         jupyter nbconvert --to pdf --allow-chromium-download test.ipynb
 
